@@ -49,7 +49,7 @@ const PostCard = ({placeholder, repost, repost_id}) => {
             <div className="post-title-bar">
                 <input required type="text" value={post.title} placeholder={placeholder || "Untitled Post"} onChange={handleTitleChange}/>
                 <p className="label username">{"@defaultuser"}</p>
-                <Button form="post-form" formType="submit" className="post-card-float-button" value="Post" color="primary" size="large" solid={true}/>
+                <Button form="post-form" formType="submit" className="title-button float-button-up" value="Post" color="primary" size="large" solid={true}/>
             </div>
 
 

@@ -1,0 +1,27 @@
+.comment {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+	background-color: #343735;
+	border-radius: 2.5rem;
+	position: relative;
+	text-align: left;
+
+	padding: 2rem;
+}
+
+.comment .comment-button {
+	position: absolute;
+	top: 1rem;
+	right: 2rem;
+}
+
+.comment p {
+	margin-bottom: 0.5rem;
+}
+
+@media (prefers-color-scheme: light) {
+	.comment {
+		background-color: #EAF4EB;
+	}
+}

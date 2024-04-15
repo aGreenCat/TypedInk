@@ -13,6 +13,12 @@
 
 	text-align: left;
 	position: relative;
+	min-width: 840px;
+}
+
+.post-card p {
+	margin: 0 0 2rem 0;
+	white-space: pre-wrap;
 }
 
 .post-card textarea {
@@ -50,8 +56,10 @@
 	outline: none;
 }
 
-.post-title-bar .username {
-	font-weight: bold;
+.post-title-bar h2 {
+	font-size: 2.25rem;
+	font-family: "Noto Serif", Georgia, Garamond, serif;
+	margin: 0;
 }
 
 .label {
@@ -64,9 +72,16 @@
 	margin-right: 1rem;
 }
 
-.post-card-float-button {
+.float-button-up {
 	position: absolute;
 	top: 2rem;
+	right: 2rem;
+	z-index: 1000;
+}
+
+.float-button-down {
+	position: absolute;
+	bottom: 2rem;
 	right: 2rem;
 	z-index: 1000;
 }
@@ -74,5 +89,25 @@
 @media (prefers-color-scheme: light) {
 	.post-card {
 		background-color: #EDEDEA;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.post-card {
+		min-width: 50vw;
+	}
+	.post-card textarea {
+		min-width: 50vw;
+	}
+
+	.post-title-bar {
+		min-width: 50vw;
+	}
+
+	.title-button {
+		position: fixed;
+		top: unset;
+		bottom: 4rem;
+		right: 4rem;
 	}
 }

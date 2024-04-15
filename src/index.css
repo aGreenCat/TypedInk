@@ -21,6 +21,15 @@
 	}
 }
 
+input {
+	border-radius: 2.5rem;
+	border: none;
+	font-size: 1rem;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #343735;
+	padding: 1rem 2.5rem;
+}
 
 body {
 	margin: 0;
@@ -57,5 +66,9 @@ a:hover {
 
 	a:hover {
 		color: #747bff;
+	}
+
+	input {
+		background-color: #EAf4EB;
 	}
 }
