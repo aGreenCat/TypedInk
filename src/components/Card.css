@@ -1,0 +1,40 @@
+.card {
+	background-color: #242326;
+	border-radius: 2.5rem;
+	padding: 2.5rem 4rem;
+
+	min-width: 20rem;
+	text-align: left;
+	line-height: 2;
+	white-space: pre-wrap;
+}
+
+.card h2 {
+	font-size: 2.25rem;
+	font-family: "Noto Serif", Georgia, Garamond, serif;
+	margin: 0;
+}
+
+.card .label {
+	font-size: 1rem;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.card .username {
+	font-weight: bold;
+}
+
+.card span {
+	margin-right: 1rem;
+}
+
+.card button {
+	float: right;
+}
+
+@media (prefers-color-scheme: light) {
+	.card {
+		background-color: #EDEDEA;
+	}
+}

@@ -1,0 +1,19 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin-top: 3rem;
+}
+
+.page-float-button {
+	position: absolute;
+	top: 4rem;
+	right: 4rem;
+	z-index: 1000;
+}
+
