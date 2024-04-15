@@ -3,10 +3,19 @@
 	border-radius: 2.5rem;
 	padding: 2.5rem 4rem;
 
-	min-width: 20rem;
+	flex-grow: 1;
+
 	text-align: left;
 	line-height: 2;
 	white-space: pre-wrap;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card a:hover {
+	color: inherit;
 }
 
 .card h2 {

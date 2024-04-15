@@ -1,6 +1,7 @@
 import Card from "./Card";
 import {useEffect, useState} from "react";
 import supabase from "../client.js";
+import {Link} from "react-router-dom";
 
 const Gallery = () => {
     const [cards, setCards] = useState(null);
@@ -27,7 +28,9 @@ const Gallery = () => {
             {cards
                 ? cards.length === 0
                     ? <p>No posts yet.</p>
-                    : cards.map((card, index) => <Card key={index} {...card}/>)
+                    : cards.map(card =>
+                        <Card key={card.id} {...card}/>
+                    )
                 : <p>Loading...</p>
             }
         </div>
