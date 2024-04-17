@@ -5,6 +5,7 @@
 
 .gallery {
 	display: flex;
+	align-items: stretch;
 	flex-wrap: wrap;
 	gap: 5rem;
 	margin-top: 3rem;

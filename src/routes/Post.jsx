@@ -31,7 +31,7 @@ const Post = () => {
         }
 
         fetchPost()
-    }, [])
+    }, [id])
 
     const updateLikes = async () => {
         setPost({ ...post, likes: post.likes + 1 });
@@ -50,7 +50,7 @@ const Post = () => {
         const comment = {
             body: commentText,
             author: "defaultuser",
-            likes: 0,
+            replies: {},
         }
 
         const newComments = post.comments ? [comment, ...post.comments] : [comment]

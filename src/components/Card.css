@@ -1,46 +1,87 @@
 .card {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: space-between;
+
 	background-color: #242326;
 	border-radius: 2.5rem;
 	padding: 2.5rem 4rem;
 
 	flex-grow: 1;
+}
 
-	text-align: left;
-	line-height: 2;
-	white-space: pre-wrap;
-
+.card__content {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
 
-.card a:hover {
-	color: inherit;
-}
-
-.card h2 {
-	font-size: 2.25rem;
+.card__content__title {
 	font-family: "Noto Serif", Georgia, Garamond, serif;
 	margin: 0;
 }
 
-.card .label {
+.card__content__author {
 	font-size: 1rem;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-.card .username {
 	font-weight: bold;
+	margin: 0;
 }
 
-.card span {
-	margin-right: 1rem;
+.card__content__body {
+	white-space: pre-wrap;
 }
 
-.card button {
-	float: right;
+.card__bar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	align-self: stretch;
 }
+
+.card__bar__stats {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+}
+
+.card__bar__stat {
+	font-size: 1rem;
+}
+
+.card__bar__viewBtn {
+
+}
+
+/*.card a:hover {*/
+/*	color: inherit;*/
+/*}*/
+
+/*.card h2 {*/
+/*	font-size: 2.25rem;*/
+/*	font-family: "Noto Serif", Georgia, Garamond, serif;*/
+/*	margin: 0;*/
+/*}*/
+
+/*.card .label {*/
+/*	font-size: 1rem;*/
+/*	margin-top: 0;*/
+/*	margin-bottom: 0;*/
+/*}*/
+
+/*.card .username {*/
+/*	font-weight: bold;*/
+/*}*/
+
+/*.card span {*/
+/*	margin-right: 1rem;*/
+/*}*/
+
+/*.card button {*/
+/*	float: right;*/
+/*}*/
 
 @media (prefers-color-scheme: light) {
 	.card {
