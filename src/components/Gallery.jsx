@@ -1,7 +1,9 @@
 import Card from "./Card";
+import ActionBar from "./ActionBar";
 import {useEffect, useState} from "react";
 import supabase from "../client.js";
-import {Link} from "react-router-dom";
+
+import "./Gallery.css"
 
 const Gallery = () => {
     const [cards, setCards] = useState(null);
@@ -25,6 +27,8 @@ const Gallery = () => {
 
     return (
         <div className="gallery">
+            <ActionBar />
+
             {cards
                 ? cards.length === 0
                     ? <p>No posts yet.</p>

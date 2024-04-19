@@ -1,0 +1,20 @@
+.actionbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.actionbar__sort {
+	display: flex;
+
+	gap: 1rem;
+}
+
+.actionbar__createBtn {
+
+}
+
+.actionbar__sort {
+	/*width: 20%;*/
+}

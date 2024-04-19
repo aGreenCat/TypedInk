@@ -21,6 +21,16 @@
 	}
 }
 
+.root {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.logo {
+	width: fit-content;
+	margin: 3rem auto;
+}
+
 input {
 	border-radius: 2.5rem;
 	border: none;
@@ -33,9 +43,7 @@ input {
 
 body {
 	margin: 0;
-	display: flex;
-	/*min-width: 320px;*/
-	/*min-height: 100vh;*/
+	width: 100vw;
 
 	font-size: 1.5rem;
 }

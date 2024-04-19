@@ -1,44 +1,44 @@
-#root {
-	max-width: 1280px;
-	margin: 0 auto;
-}
+/*#root {*/
+/*	max-width: 1280px;*/
+/*	margin: 0 auto;*/
+/*}*/
 
-.gallery {
-	display: flex;
-	align-items: stretch;
-	flex-wrap: wrap;
-	gap: 5rem;
-	margin-top: 3rem;
-}
+/*.gallery {*/
+/*	display: flex;*/
+/*	align-items: stretch;*/
+/*	flex-wrap: wrap;*/
+/*	gap: 5rem;*/
+/*	margin-top: 3rem;*/
+/*}*/
 
-.page-float-button {
-	position: absolute;
-	top: 4rem;
-	right: 4rem;
-	z-index: 1000;
-}
+/*.page-float-button {*/
+/*	position: absolute;*/
+/*	top: 4rem;*/
+/*	right: 4rem;*/
+/*	z-index: 1000;*/
+/*}*/
 
-.username {
-	font-weight: bold;
-}
+/*.username {*/
+/*	font-weight: bold;*/
+/*}*/
 
-@media all and (max-width: 1300px) {
-	#root {
-		max-width: 900px;
-	}
-}
+/*@media all and (max-width: 1300px) {*/
+/*	#root {*/
+/*		max-width: 900px;*/
+/*	}*/
+/*}*/
 
-@media only screen and (max-width: 1000px) {
-	#root {
-		max-width: 650px;
-	}
-	.page-float-button {
-		position: fixed;
-	}
-}
+/*@media only screen and (max-width: 1000px) {*/
+/*	#root {*/
+/*		max-width: 650px;*/
+/*	}*/
+/*	.page-float-button {*/
+/*		position: fixed;*/
+/*	}*/
+/*}*/
 
-@media only screen and (max-width : 480px) {
-	#root {
-		max-width: 80vw;
-	}
-}
+/*@media only screen and (max-width : 480px) {*/
+/*	#root {*/
+/*		max-width: 80vw;*/
+/*	}*/
+/*}*/

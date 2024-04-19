@@ -1,10 +1,12 @@
-import { Outlet } from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 import "./App.css"
 
 const Layout = () => {
     return (
         <>
-            <h1>TypedInk</h1>
+            <Link to="/">
+                <h1 className="logo">TypedInk</h1>
+            </Link>
             <Outlet/>
         </>
     )
