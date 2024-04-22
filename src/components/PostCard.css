@@ -1,113 +1,59 @@
-.post-title-bar {
-	background-color: transparent;
-	padding: 1rem 3rem;
+.postCard {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
 
-	text-align: left;
-	position: relative;
-}
-
-.post-card {
-	background-color: #242326;
+	background-color: var(--lightpurple-dark);
 	border-radius: 2.5rem;
-	padding: 2rem 3rem;
 
-	text-align: left;
-	position: relative;
-	min-width: 840px;
+	margin: 0;
+	padding: 3rem;
 }
 
-.post-card p {
-	margin: 0 0 2rem 0;
+.postCard__body {
 	white-space: pre-wrap;
-}
-
-.post-card textarea {
-	min-height: 20rem;
-	min-width: 40rem;
+	overflow-x: hidden;
+	resize: none;
+	background-color: transparent;
+	border: transparent;
 
 	font-family: "Roboto Light", system-ui, Avenir, Helvetica, Arial, sans-serif;
 	font-size: 1.5rem;
-	line-height: 2;
 
-	border: none;
-	background-color: transparent;
-	resize: vertical;
-	margin-bottom: 1rem;
+	min-height: 25vh;
 }
 
-.post-card textarea:focus,
-.post-card textarea:focus-visible {
-	outline: none;
-	border: none;
-}
-
-.post-title-bar input {
-	font-family: "Noto Serif", Georgia, Garamond, serif;
-	font-size: 2.25rem;
-	font-weight: bold;
-
-	border: none;
-	background-color: transparent;
-}
-
-.post-title-bar input:focus,
-.post-title-bar input:focus-visible {
-	border: none;
+.postCard__body:focus,
+.postCard__body:active {
 	outline: none;
 }
 
-.post-title-bar h2 {
-	font-size: 2.25rem;
-	font-family: "Noto Serif", Georgia, Garamond, serif;
-	margin: 0;
+.postCard__bottomBar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.label {
+.postCard__bottomBar__buttons {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.postCard__bottomBar__labels {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+
+.postCard__bottomBar__label {
 	font-size: 1rem;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-.post-card span {
-	margin-right: 1rem;
-}
-
-.float-button-up {
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
-	z-index: 1000;
-}
-
-.float-button-down {
-	position: absolute;
-	bottom: 2rem;
-	right: 2rem;
-	z-index: 1000;
 }
 
 @media (prefers-color-scheme: light) {
-	.post-card {
-		background-color: #EDEDEA;
-	}
-}
-
-@media only screen and (max-width: 1000px) {
-	.post-card {
-		min-width: 50vw;
-	}
-	.post-card textarea {
-		min-width: 50vw;
-	}
-
-	.post-title-bar {
-		min-width: 50vw;
-	}
-
-	.title-button {
-		position: fixed;
-		top: unset;
-		bottom: 4rem;
-		right: 4rem;
+	.postCard {
+		background-color: var(--lightpurple-light);
 	}
 }

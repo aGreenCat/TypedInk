@@ -1,0 +1,25 @@
+.post {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	margin: 0 auto;
+	width: 50%;
+}
+
+.comments {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+	.post {
+		width: 36rem;
+	}
+
+	.postForm__titleBar {
+		padding: 0;
+	}
+
+}

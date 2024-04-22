@@ -1,34 +1,31 @@
 :root {
+	--bg-dark: #151515;
+	--fg-dark: #fffff0;
+	--lightgreen-dark: #343735;
+	--lightpurple-dark: #242326;
+
+	--bg-light: #fffff0;
+	--fg-light: #151515;
+	--lightgreen-light: #EAF4EB;
+	--lightpurple-light: #EDEDEA;
+
+	--purple: #8f8ac6;
+	--green: #4f9685;
+
 	font-family: "Roboto Light", system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-size: 12px;
 	font-weight: lighter;
 
 	color-scheme: light dark;
-	color: #fffff0;
-	background-color: #151515;
+	color: var(--fg-dark);
+	background-color: var(--bg-dark);
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
 
-@media only screen and (max-width: 600px) {
-	:root {
-		line-height: 1.2;
-		font-size: 10px;
-	}
-}
-
-.root {
-	max-width: 1280px;
-	margin: 0 auto;
-}
-
-.logo {
-	width: fit-content;
-	margin: 3rem auto;
 }
 
 input {
@@ -37,11 +34,12 @@ input {
 	font-size: 1rem;
 	font-weight: 500;
 	font-family: inherit;
-	background-color: #343735;
+	background-color: var(--lightgreen-dark);
 	padding: 1rem 2.5rem;
 }
 
 body {
+	overflow-x: clip;
 	margin: 0;
 	width: 100vw;
 
@@ -67,15 +65,18 @@ a:hover {
 
 @media (prefers-color-scheme: light) {
 	:root {
-		color: #151515;
-		background-color: #fffff0;
-	}
-
-	a:hover {
-		color: #747bff;
+		color: var(--fg-light);
+		background-color: var(--bg-light);
 	}
 
 	input {
-		background-color: #EAf4EB;
+		background-color: var(--lightgreen-light);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	:root {
+		line-height: 1.2;
+		font-size: 10px;
 	}
 }

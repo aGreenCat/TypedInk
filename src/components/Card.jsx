@@ -9,20 +9,25 @@ const Card = ({id, created_at, title, author, body, likes, chars, repost, repost
 
     return (
         <div className="card">
-            <Link to={`/posts/${id}`} className="card__content">
+            <div className="card__content">
                 <h2 className="card__content__title">{title}</h2>
                 <p className="card__content__author">{author}</p>
 
                 <p className="card__content__body">{body}</p>
-            </Link>
+            </div>
 
             <div className="card__bar">
                 <div className="card__bar__stats">
                     <span className="card__bar__stat">{date}</span>
                     <span className="card__bar__stat">{chars} Chars</span>
+                    <span className="card__bar__stat">{likes} Like{likes > 1 ? 's' : ''}</span>
+                    <span className="card__bar__stat">{repost ? "Repost" : ""}</span>
                 </div>
 
-                <Button className="card__bar__viewBtn" value={`${likes} Likes`} color="primary" size="small" solid={true}/>
+                <Link to={`/posts/${id}`} className="card__bar__viewBtn">
+                    <Button value="View" color="primary" size="small" solid={true}/>
+                </Link>
+
             </div>
         </div>
     );

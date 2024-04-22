@@ -4,7 +4,7 @@
 	align-items: stretch;
 	justify-content: space-between;
 
-	background-color: #343735;
+	background-color: var(--lightgreen-dark);
 	border-radius: 2.5rem;
 
 	text-align: left;
@@ -38,6 +38,6 @@
 
 @media (prefers-color-scheme: light) {
 	.comment {
-		background-color: #EAF4EB;
+		background-color: var(--bg-light);
 	}
 }

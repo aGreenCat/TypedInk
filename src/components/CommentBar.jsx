@@ -10,14 +10,17 @@ const CommentBar = ({handleComment}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        handleComment(comment);
+        if (comment.trim() === '') {
+            return
+        }
+        handleComment(comment.trim());
         setComment('');
     }
 
     return (
-        <form id="comment-form" onSubmit={handleSubmit} style={{marginTop: "2rem", display: "flex", gap: "1.5rem", flexWrap: "wrap"}}>
+        <form onSubmit={handleSubmit} style={{display: "flex", gap: "1.5rem", flexWrap: "wrap"}}>
             <input type="text" style={{flexGrow: 1}} placeholder="Leave a comment..." value={comment} onChange={handleChange}/>
-            <Button form="comment-form" type="submit" color="secondary" size="large" solid={true} value="Comment" />
+            <Button type="submit" color="secondary" size="large" solid={true} value="Comment" />
         </form>
     );
 };

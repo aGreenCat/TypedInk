@@ -1,0 +1,62 @@
+.postForm {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	margin: 0 auto;
+	width: 50%;
+}
+
+.postForm__titleBar {
+	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
+	align-items: center;
+	gap: 3rem;
+
+	padding: 0 3rem;
+}
+
+.postForm__titleBar__info {
+	display: flex;
+	flex-direction: column;
+
+	flex-grow: 1;
+}
+
+.postForm__titleBar__info__title {
+	font-family: "Noto Serif", Georgia, Garamond, serif;
+	font-size: 2.25rem;
+	font-weight: bold;
+
+	margin: 0;
+	padding: 0;
+
+	border: none;
+	background-color: transparent;
+	border-radius: 0;
+
+	width: 100%;
+}
+
+.postForm__titleBar__info__title:focus,
+.postForm__titleBar__info__title:active {
+	outline: none;
+}
+
+.postForm__titleBar__info__author {
+	font-size: 1rem;
+	font-weight: bold;
+	margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+	.postForm {
+		width: 36rem;
+	}
+
+	.postForm__titleBar {
+		padding: 0;
+	}
+
+}

@@ -1,66 +1,48 @@
 import "./PostCard.css";
 import Button from "./Button.jsx";
-import {useState} from "react";
+import {Link} from "react-router-dom";
 import supabase from "../client.js";
 
-const PostCard = ({placeholder, repost, repost_id}) => {
-    const [post, setPost] = useState({
-        title: "",
-        author: "@defaultuser",
-        body: "",
-        chars: 0,
-        likes: 0,
-        repost: repost || false,
-        repost_id: repost_id || null,
-    });
-
-    const handleTitleChange = (event) => {
-        setPost({
-            ...post,
-            title: event.target.value,
-        });
-    }
-    const handleBodyChange = (event) => {
-        setPost({
-            ...post,
-            body: event.target.value,
-            chars: event.target.value.length,
-        });
-    }
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        try {
-            await supabase
-                .from("Posts")
-                .insert([post]);
-
-            window.location = "/";
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
+const PostCard = ({post, handleBodyChange, edit=true}) => {
     const d = new Date();
     const date = `${d.getDate()} ${d.toLocaleString('default', { month: 'long' })} ${d.getFullYear()}`;
 
+    const deletePost = async () => {
+        try {
+            await supabase
+                .from("Posts")
+                .delete()
+                .eq("id", post.id);
+        } catch (error) {
+            console.error(error);
+        }
+
+        window.location.href = "/";
+    }
+
     return (
-        <form id="post-form" style={{marginTop: "5rem"}} onSubmit={handleSubmit}>
-            <div className="post-title-bar">
-                <input required type="text" value={post.title} placeholder={placeholder || "Untitled Post"} onChange={handleTitleChange}/>
-                <p className="label username">{"@defaultuser"}</p>
-                <Button form="post-form" formType="submit" className="title-button float-button-up" value="Post" color="primary" size="large" solid={true}/>
+        <div className="postCard">
+            {edit
+                ? <textarea required placeholder="Type something amazing..." className="postCard__body" onChange={handleBodyChange} value={post.body}></textarea>
+                : <div className="postCard__body">{post.body}</div>
+            }
+            <div className="postCard__bottomBar">
+                <div className="postCard__bottomBar__labels">
+                    <div className="postCard__bottomBar__label">{date}</div>
+                    <div className="postCard__bottomBar__label">{post.chars} Chars</div>
+                </div>
+
+                {!edit &&
+                    <div className="postCard__bottomBar__buttons">
+                        <Button className="postCard__bottomBar__button" value="Delete" color="secondary" size="small" solid={false} onClick={deletePost}/>
+                        <Link to={"edit"}>
+                            <Button className="postCard__bottomBar__button" value="Edit" color="secondary" size="small" solid={false}/>
+                        </Link>
+                        <Button className="postCard__bottomBar__button" value="Repost" size="small" solid={false}/>
+                    </div>
+                }
             </div>
-
-
-            <div className="post-card">
-                <textarea required onChange={handleBodyChange}></textarea>
-                <br/>
-
-                <span className="label">{date}</span>
-                <span className="label" style={{marginRight: 0, float: "right"}}>{post.chars} Chars</span>
-            </div>
-        </form>
+        </div>
     );
 };
 

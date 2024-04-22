@@ -2,6 +2,9 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	row-gap: 1rem;
+	flex-wrap: wrap;
+
 	width: 100%;
 }
 
@@ -12,7 +15,7 @@
 }
 
 .actionbar__createBtn {
-
+	/* Add shadow */
 }
 
 .actionbar__sort {

@@ -4,8 +4,8 @@ import "./App.css"
 const Layout = () => {
     return (
         <>
-            <Link to="/">
-                <h1 className="logo">TypedInk</h1>
+            <Link className="logoWrapper" to="/">
+                <h1 className="logoWrapper__logo">TypedInk</h1>
             </Link>
             <Outlet/>
         </>
