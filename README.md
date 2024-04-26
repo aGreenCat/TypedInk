@@ -41,7 +41,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Walkthrough](https://github.com/aGreenCat/final-project-typedink/blob/main/public/TypedInk.gif)
+![Walkthrough](https://github.com/aGreenCat/TypedInk/blob/main/public/TypedInk.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
