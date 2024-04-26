@@ -47,7 +47,7 @@ const Post = () => {
         const comment = {
             body: commentText,
             author: "defaultuser",
-            replies: {},
+            replies: [],
         }
 
         const newComments = post.comments ? [comment, ...post.comments] : [comment]
@@ -89,7 +89,7 @@ const Post = () => {
                     {post.comments
                         ? <div className="comments">
                             {post.comments.map((comment, index) => (
-                                <Comment key={index} {...comment} />
+                                <Comment key={comment.id} index={index} {...comment} post={post} />
                             ))}
                         </div>
                         : <p>No Comments</p>
